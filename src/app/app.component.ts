@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Keg } from './models/keg.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'tap-room';
+
+  kegs: Keg[] = [];
+
+  addKeg(name, brand, price, alcContent){
+    this.kegs.push(new Keg(name, brand, price, alcContent))
+  }
+
 }
