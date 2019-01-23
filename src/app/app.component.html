@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    Welcome to {{ title }} 🍻!
   </h1>
 
 </div>
@@ -29,9 +29,12 @@
     <tr [class]="lowVolume(currentKeg)" *ngFor="let currentKeg of kegs">
       <td>{{currentKeg.name}}</td>
       <td>{{currentKeg.brand}}</td>
-      <td>{{currentKeg.price}}</td>
-      <td>{{currentKeg.alcContent}}</td>
+      <td>${{currentKeg.price}}  </td>
+      <td>{{currentKeg.alcContent}}%</td>
       <td>{{currentKeg.volume}}</td>
+      <td *ngIf="currentKeg.price < 5">💰</td>
+      <td *ngIf="currentKeg.price >=5 && currentKeg.price <=10 ">💰💰</td>
+      <td *ngIf="currentKeg.price > 10 ">💰💰💰</td>
       <button (click)="editKeg(currentKeg)">Edit!!</button>
       <button (click)="decreaseVolume(currentKeg)">Serve</button>
     </tr>
