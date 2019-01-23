@@ -4,6 +4,8 @@
     Welcome to {{ title }} 🍻!
   </h1>
 
+<app-add-keg></app-add-keg>
+<app-list-keg></app-list-keg>
 </div>
 <form>
     <label for="name">Name of Beer</label>
@@ -16,39 +18,6 @@
     <input [(ngModel)] = "alcContent" type="number" name="alcContent">
     <button (click)="addKeg(name, brand, price, alcContent)">Add a Keg</button>
 </form>
-
-<div *ngIf="kegs.length > 0">
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Brand</th>
-      <th>Price</th>
-      <th>Alcohol Content</th>
-      <th>Volume</th>
-
-    </tr>
-    <tr [class]="lowVolume(currentKeg)" *ngFor="let currentKeg of kegs">
-      <td>{{currentKeg.name}}</td>
-      <td>{{currentKeg.brand}}</td>
-      <td>${{currentKeg.price}}  </td>
-      <td>{{currentKeg.alcContent}}%</td>
-      <td>{{currentKeg.volume}}</td>
-      <td *ngIf="currentKeg.price < 5">💰</td>
-      <td *ngIf="currentKeg.price >=5 && currentKeg.price <=10 ">💰💰</td>
-      <td *ngIf="currentKeg.price > 10 ">💰💰💰</td>
-      <td *ngIf="currentKeg.alcContent < 3">🍺</td>
-      <td *ngIf="currentKeg.alcContent >=3 && currentKeg.alcContent <=6 ">🍺🍺</td>
-      <td *ngIf="currentKeg.alcContent > 6 && currentKeg.alcContent <=10">🍺🍺🍺</td>
-      <td *ngIf="currentKeg.alcContent > 10">🍺🍺🍺🍺</td>
-      <button (click)="editKeg(currentKeg)">Edit!!</button>
-      <button (click)="decreaseVolume(currentKeg)">Serve A Pint</button>
-      <button (click)="decreaseVolumeBy2(currentKeg)">Serve A Growler</button>
-    </tr>
-
-  </table>
-
-</div>
-
 
 
 <div *ngIf = "selectedKeg">
