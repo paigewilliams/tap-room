@@ -26,6 +26,11 @@ export class AppComponent {
 
   decreaseVolume(currentKeg){
     currentKeg.volume --;
+  }
 
+  lowVolume(currentKeg){
+    if (currentKeg.volume <= 10){
+      return "bg-danger"
+    }
   }
 }

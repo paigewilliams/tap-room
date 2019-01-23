@@ -26,7 +26,7 @@
       <th>Alcohol Content</th>
       <th>Volume</th>
     </tr>
-    <tr *ngFor="let currentKeg of kegs">
+    <tr [class]="lowVolume(currentKeg)" *ngFor="let currentKeg of kegs">
       <td>{{currentKeg.name}}</td>
       <td>{{currentKeg.brand}}</td>
       <td>{{currentKeg.price}}</td>
