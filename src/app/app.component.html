@@ -25,6 +25,7 @@
       <th>Price</th>
       <th>Alcohol Content</th>
       <th>Volume</th>
+
     </tr>
     <tr [class]="lowVolume(currentKeg)" *ngFor="let currentKeg of kegs">
       <td>{{currentKeg.name}}</td>
@@ -35,8 +36,13 @@
       <td *ngIf="currentKeg.price < 5">💰</td>
       <td *ngIf="currentKeg.price >=5 && currentKeg.price <=10 ">💰💰</td>
       <td *ngIf="currentKeg.price > 10 ">💰💰💰</td>
+      <td *ngIf="currentKeg.alcContent < 3">🍺</td>
+      <td *ngIf="currentKeg.alcContent >=3 && currentKeg.alcContent <=6 ">🍺🍺</td>
+      <td *ngIf="currentKeg.alcContent > 6 && currentKeg.alcContent <=10">🍺🍺🍺</td>
+      <td *ngIf="currentKeg.alcContent > 10">🍺🍺🍺🍺</td>
       <button (click)="editKeg(currentKeg)">Edit!!</button>
-      <button (click)="decreaseVolume(currentKeg)">Serve</button>
+      <button (click)="decreaseVolume(currentKeg)">Serve A Pint</button>
+      <button (click)="decreaseVolumeBy2(currentKeg)">Serve A Growler</button>
     </tr>
 
   </table>
