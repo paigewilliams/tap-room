@@ -13,6 +13,9 @@ export class AppComponent {
 
   addKeg(name, brand, price, alcContent){
     this.kegs.push(new Keg(name, brand, price, alcContent))
+    console.log(this.kegs);
   }
+
+  
 
 }
