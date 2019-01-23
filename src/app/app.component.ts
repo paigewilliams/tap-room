@@ -24,4 +24,8 @@ export class AppComponent {
     this.selectedKeg = null;
   }
 
+  decreaseVolume(currentKeg){
+    currentKeg.volume --;
+
+  }
 }

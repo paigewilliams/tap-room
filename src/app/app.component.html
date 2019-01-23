@@ -19,7 +19,8 @@
     <td>{{currentKeg.price}}</td>
     <td>{{currentKeg.alcContent}}</td>
     <td>{{currentKeg.volume}}</td>
-    <button (click) = "editKeg(currentKeg)"> Edit!! </button>
+    <button (click)="editKeg(currentKeg)">Edit!!</button>
+    <button (click)="decreaseVolume(currentKeg)">Serve</button>
   </tr>
 
 </table>
