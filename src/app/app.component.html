@@ -19,6 +19,7 @@
     <td>{{currentKeg.price}}</td>
     <td>{{currentKeg.alcContent}}</td>
     <td>{{currentKeg.volume}}</td>
+    <button (click) = "editKeg(currentKeg)"> Edit!! </button>
   </tr>
 
 </table>
@@ -34,3 +35,18 @@
     <input [(ngModel)] = "alcContent" type="number" name="alcContent">
     <button (click)="addKeg(name, brand, price, alcContent)">Add a Keg</button>
 </form>
+
+<div *ngIf = "selectedKeg">
+  <h3>{{selectedKeg.name}}</h3>
+  <h3>Edit Keg</h3>
+  <label>Enter Keg Name: </label>
+  <input [(ngModel)]="selectedKeg.name">
+  <label>Enter Keg Brand: </label>
+  <input [(ngModel)]="selectedKeg.brand">
+  <label>Enter Keg price: </label>
+  <input [(ngModel)]="selectedKeg.price">
+  <label>Enter Keg Alcohol content: </label>
+  <input [(ngModel)]="selectedKeg.alcContent">
+
+  <button (click) = "finishedEditing()">Done</button>
+</div>
