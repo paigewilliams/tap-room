@@ -10,6 +10,7 @@ import { PricePipe } from './price.pipe';
 import { VolumePipe } from './volume.pipe';
 import { CustomerComponent } from './customer/customer.component';
 import { routing } from './app.routing';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { routing } from './app.routing';
     EditKegComponent,
     PricePipe,
     VolumePipe,
-    CustomerComponent
+    CustomerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
