@@ -27,13 +27,13 @@
     </tr>
   </table>
 </div> -->
-
+<p>Fiter By Price:</p>
 <select (change)="onChange($event.target.value)">
   <option value="allkegs">All Kegs</option>
   <option value="less than 7">less than $7</option>
   <option value="greater than 7" selected="selected">greater than $7</option>
 </select>
-
+<p>Fiter By Volume:</p>
 <select (change)="onVolume($event.target.value)">
   <option value="allkegs">All Kegs</option>
   <option value="less than 10">less than 10</option>
