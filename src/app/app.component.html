@@ -2,8 +2,9 @@
 <div class="nav">
   <nav>
     <h1>Welcome to {{title}}</h1>
-    <a routerLink="customer"> Customer</a>
-    <a href="">Home</a>
+    <a routerLink="">Home</a>
+    <a routerLink="customer">Customer</a>
+    <a routerLink="employee">Employee</a>
   </nav>
 </div>
 <div class="container">
@@ -11,11 +12,11 @@
   <router-outlet></router-outlet>
 
 </div>
-<!-- <div class="container">
+<div class="container">
   <div class="column">
     <app-add-keg (sendKeg)="addKeg($event)"></app-add-keg>
     <app-edit-keg [childSelectedKeg] = "selectedKeg" (clickedDone)="finishedEditing()"></app-edit-keg>
   </div>
-  <app-list-keg [childKegList]="masterKegsList" (clickSender)="editKeg($event)"></app-list-keg> -->
+  <app-list-keg [childKegList]="masterKegsList" (clickSender)="editKeg($event)"></app-list-keg>
 
-<!-- </div> -->
+</div>

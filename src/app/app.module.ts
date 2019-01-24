@@ -11,6 +11,7 @@ import { VolumePipe } from './volume.pipe';
 import { CustomerComponent } from './customer/customer.component';
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     PricePipe,
     VolumePipe,
     CustomerComponent,
-    HomeComponent
+    HomeComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
