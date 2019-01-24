@@ -9,6 +9,7 @@ import { Keg } from '../models/keg.model';
 export class ListKegComponent  {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
+  filterByPrice: string = "allkegs";
 
   editButtonClicked(kegToEdit: Keg){
     this.clickSender.emit(kegToEdit);
@@ -21,5 +22,9 @@ export class ListKegComponent  {
   decreaseVolumeBy2(currentKeg: Keg){
     currentKeg.volume = currentKeg.volume - 2;
   }
+
+  onChange(optionFromMenu) {
+  this.filterByPrice= optionFromMenu;
+}
 
  }

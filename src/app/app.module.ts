@@ -6,14 +6,15 @@ import { AppComponent } from './app.component';
 import { AddKegComponent } from './add-keg/add-keg.component';
 import { ListKegComponent } from './list-keg/list-keg.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
-
+import { PricePipe } from './price.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddKegComponent,
     ListKegComponent,
-    EditKegComponent
+    EditKegComponent,
+    PricePipe
   ],
   imports: [
     BrowserModule,
