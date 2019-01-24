@@ -21,4 +21,9 @@ export class AppComponent {
   this.selectedKeg = clickedKeg;
 }
 
+  finishedEditing(){
+  this.selectedKeg = null;
+  console.log(this.selectedKeg)
+  }
+
 }
