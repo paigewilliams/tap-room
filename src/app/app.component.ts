@@ -10,7 +10,11 @@ export class AppComponent {
   title = 'tap-room';
   selectedKeg: Keg = null;
 
-  masterKegsList: Keg[] = [];
+  masterKegsList: Keg[] = [
+    new Keg('Beer1', 'Beer2', 5, 6),
+    new Keg('Beer3', 'Beer4', 6, 7),
+    new Keg('Beer5', 'Beer6', 8, 9)
+  ];
 
   addKeg(newKeg: Keg){
     this.masterKegsList.push(newKeg);

@@ -1,6 +1,6 @@
-<div *ngIf = "childSelectedKeg">
-  <h3>{{childSelectedKeg.name}}</h3>
-  <h3>Edit Keg</h3>
+<div *ngIf = "childSelectedKeg" class = "form">
+  <!-- <h3>{{childSelectedKeg.name}}</h3> -->
+  <h3>Edit Keg - {{childSelectedKeg.name}}</h3>
   <label>Enter Keg Name: </label>
   <input [(ngModel)]="childSelectedKeg.name">
   <label>Enter Keg Brand: </label>

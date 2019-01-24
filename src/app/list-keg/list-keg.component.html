@@ -1,5 +1,4 @@
-<div >
-  <!-- *ngIf="kegs.length > 0" -->
+<!-- <div >
   <table>
     <tr>
       <th>Name</th>
@@ -14,7 +13,7 @@
       <td>{{currentKeg.brand}}</td>
       <td>${{currentKeg.price}}  </td>
       <td>{{currentKeg.alcContent}}%</td>
-      <td>{{currentKeg.volume}}</td>
+      <td>{{currentKeg.alcContent}}%</td>
       <td *ngIf="currentKeg.price < 5">💰</td>
       <td *ngIf="currentKeg.price >=5 && currentKeg.price <=10 ">💰💰</td>
       <td *ngIf="currentKeg.price > 10 ">💰💰💰</td>
@@ -26,7 +25,20 @@
       <button (click)="decreaseVolume(currentKeg)">Serve A Pint</button>
       <button (click)="decreaseVolumeBy2(currentKeg)">Serve A Growler</button>
     </tr>
-
   </table>
+</div> -->
 
-</div>
+  <div class="row">
+    <div *ngFor="let currentKeg of childKegList" class="column">
+      <div class="card">
+        <h3>{{currentKeg.name}}</h3>
+        <h5>{{currentKeg.brand}}</h5>
+        <p>${{currentKeg.price}}</p>
+        <p>{{currentKeg.alcContent}}%</p>
+        <p>{{currentKeg.volume}}</p>
+        <button (click)="editButtonClicked(currentKeg)">Edit!!</button>
+        <button (click)="decreaseVolume(currentKeg)">Serve A Pint</button>
+        <button (click)="decreaseVolumeBy2(currentKeg)">Serve A Growler</button>
+      </div>
+    </div>
+  </div>
