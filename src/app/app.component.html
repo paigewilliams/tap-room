@@ -5,7 +5,7 @@
   </h1>
 
 <app-add-keg (sendKeg)="addKeg($event)"></app-add-keg>
-<app-list-keg></app-list-keg>
+<app-list-keg [childKegList]="masterKegsList" (clickSender)="editKeg($event)"></app-list-keg>
 </div>
 
 

@@ -9,7 +9,7 @@
       <th>Volume</th>
 
     </tr>
-    <tr [class]="lowVolume(currentKeg)" *ngFor="let currentKeg of kegs">
+    <tr *ngFor="let currentKeg of childKegList">
       <td>{{currentKeg.name}}</td>
       <td>{{currentKeg.brand}}</td>
       <td>${{currentKeg.price}}  </td>
