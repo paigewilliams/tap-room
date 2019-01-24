@@ -6,21 +6,5 @@
 
 <app-add-keg (sendKeg)="addKeg($event)"></app-add-keg>
 <app-list-keg [childKegList]="masterKegsList" (clickSender)="editKeg($event)"></app-list-keg>
+<app-edit-keg [childSelectedKeg] = "selectedKeg" (clickedDone) = "finishedEditing()"></app-edit-keg>
 </div>
-
-
-
-<!-- <div *ngIf = "selectedKeg">
-  <h3>{{selectedKeg.name}}</h3>
-  <h3>Edit Keg</h3>
-  <label>Enter Keg Name: </label>
-  <input [(ngModel)]="selectedKeg.name">
-  <label>Enter Keg Brand: </label>
-  <input [(ngModel)]="selectedKeg.brand">
-  <label>Enter Keg price: </label>
-  <input [(ngModel)]="selectedKeg.price">
-  <label>Enter Keg Alcohol content: </label>
-  <input [(ngModel)]="selectedKeg.alcContent">
-
-  <button (click) = "finishedEditing()">Done</button>
-</div> -->

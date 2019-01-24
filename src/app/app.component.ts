@@ -16,11 +16,9 @@ export class AppComponent {
     this.masterKegsList.push(newKeg);
     console.log(this.masterKegsList);
   }
-  // addKeg(name, brand, price, alcContent){
-  //   this.kegs.push(new Keg(name, brand, price, alcContent))
-  //   console.log(this.kegs);
-  // }
 
-
+  editKeg(clickedKeg){
+  this.selectedKeg = clickedKeg;
+}
 
 }
