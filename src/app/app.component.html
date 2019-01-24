@@ -1,14 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="nav">
   <nav>
-    <h1>
-      Welcome to {{ title }} 🍻!
-    </h1>
+    <h1>Welcome to {{title}}</h1>
+    <a routerLink="customer"> Customer</a>
+    <a href="">Home</a>
   </nav>
 </div>
 <div class="container">
-  <a href="/"> Customer</a>
-  <a href="/"> Employee</a>
+
   <router-outlet></router-outlet>
 
 </div>

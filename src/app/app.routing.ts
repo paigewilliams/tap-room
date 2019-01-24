@@ -8,11 +8,11 @@ const appRoutes: Routes = [
   {
   path: '',
   component: HomeComponent
+},
+{
+  path: 'customer',
+  component: CustomerComponent
 }
-// {
-//   path: '',
-//   component: AppComponent
-// }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
