@@ -4,15 +4,16 @@
     <h1>
       Welcome to {{ title }} 🍻!
     </h1>
+    <router-outlet></router-outlet>
     <a href="/"> Customer</a>
     <a href="/"> Employee</a>
   </nav>
 </div>
-<div class="container">
+<!-- <div class="container">
   <div class="column">
     <app-add-keg (sendKeg)="addKeg($event)"></app-add-keg>
     <app-edit-keg [childSelectedKeg] = "selectedKeg" (clickedDone)="finishedEditing()"></app-edit-keg>
   </div>
-  <app-list-keg [childKegList]="masterKegsList" (clickSender)="editKeg($event)"></app-list-keg>
+  <app-list-keg [childKegList]="masterKegsList" (clickSender)="editKeg($event)"></app-list-keg> -->
 
-</div>
+<!-- </div> -->
