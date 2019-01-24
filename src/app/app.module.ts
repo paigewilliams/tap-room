@@ -7,6 +7,7 @@ import { AddKegComponent } from './add-keg/add-keg.component';
 import { ListKegComponent } from './list-keg/list-keg.component';
 import { EditKegComponent } from './edit-keg/edit-keg.component';
 import { PricePipe } from './price.pipe';
+import { VolumePipe } from './volume.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PricePipe } from './price.pipe';
     AddKegComponent,
     ListKegComponent,
     EditKegComponent,
-    PricePipe
+    PricePipe,
+    VolumePipe
   ],
   imports: [
     BrowserModule,

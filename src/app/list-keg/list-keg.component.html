@@ -30,12 +30,17 @@
 
 <select (change)="onChange($event.target.value)">
   <option value="allkegs">All Kegs</option>
-  <option value="less than 7">less than 7</option>
-  <option value="greater than 7" selected="selected">greater than 7</option>
+  <option value="less than 7">less than $7</option>
+  <option value="greater than 7" selected="selected">greater than $7</option>
+</select>
+
+<select (change)="onVolume($event.target.value)">
+  <option value="allkegs">All Kegs</option>
+  <option value="less than 10">less than 10</option>
 </select>
 
   <div class="row">
-    <div *ngFor="let currentKeg of childKegList | price:filterByPrice" class="column">
+    <div *ngFor="let currentKeg of childKegList | price:filterByPrice | volume:filterByVolume" class="column">
       <div class="card">
         <h3>{{currentKeg.name}}</h3>
         <h5>{{currentKeg.brand}}</h5>

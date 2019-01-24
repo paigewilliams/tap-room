@@ -10,6 +10,7 @@ export class ListKegComponent  {
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
   filterByPrice: string = "allkegs";
+  filterByVolume: string = "allkegs";
 
   editButtonClicked(kegToEdit: Keg){
     this.clickSender.emit(kegToEdit);
@@ -24,7 +25,11 @@ export class ListKegComponent  {
   }
 
   onChange(optionFromMenu) {
-  this.filterByPrice= optionFromMenu;
+  this.filterByPrice = optionFromMenu;
 }
+
+  onVolume(optionFromMenu){
+    this.filterByVolume = optionFromMenu;
+  }
 
  }
