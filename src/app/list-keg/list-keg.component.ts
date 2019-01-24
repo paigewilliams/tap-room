@@ -13,4 +13,13 @@ export class ListKegComponent  {
   editButtonClicked(kegToEdit: Keg){
     this.clickSender.emit(kegToEdit);
   }
+
+  decreaseVolume(currentKeg: Keg){
+    currentKeg.volume--;
+  }
+
+  decreaseVolumeBy2(currentKeg: Keg){
+    currentKeg.volume = currentKeg.volume - 2;
+  }
+
  }
