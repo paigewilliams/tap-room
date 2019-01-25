@@ -12,11 +12,3 @@
   <router-outlet></router-outlet>
 
 </div>
-<div class="container">
-  <div class="column">
-    <app-add-keg (sendKeg)="addKeg($event)"></app-add-keg>
-    <app-edit-keg [childSelectedKeg] = "selectedKeg" (clickedDone)="finishedEditing()"></app-edit-keg>
-  </div>
-  <app-list-keg [childKegList]="masterKegsList" (clickSender)="editKeg($event)"></app-list-keg>
-
-</div>
